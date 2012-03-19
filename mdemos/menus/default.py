@@ -14,7 +14,7 @@
 # limitations under the License.
 
 """
-:mod:`moksha.apps.menus.default` - The default Moksha Menu
+:mod:`mdemos.menus.default` - The default Moksha Menu
 =========================================================
 The default Moksha menu is an example Menu that lists
 the installed Applications, Widgets, etc.
@@ -25,7 +25,7 @@ the installed Applications, Widgets, etc.
 import moksha
 import moksha.utils
 
-from moksha.apps.menus import (
+from mdemos.menus import (
     MokshaMenu, MokshaContextualMenu,
 )
 

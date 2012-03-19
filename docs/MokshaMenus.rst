@@ -1,5 +1,5 @@
-.. automodule:: moksha.apps.menus.widgets
+.. automodule:: mdemos.menus.widgets
 
-.. widgetbrowser:: moksha.apps.menus.default.MokshaDefaultMenu
+.. widgetbrowser:: mdemos.menus.default.MokshaDefaultMenu
    :tabs: demo, source
    :size: large

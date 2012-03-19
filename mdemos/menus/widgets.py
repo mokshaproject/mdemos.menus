@@ -14,8 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 """
-:mod:`moksha.apps.menus.widgets` - Moksha Menu Widgets
-======================================================
+:mod:`mdemos.menus.widgets` - Moksha Menu Widgets
+=================================================
 
 This is a powerful component to build easily a multilevel tree menu or a
 contextual menu (right click) in an intuitive way.
@@ -54,7 +54,7 @@ mbmenu_css = twc.CSSLink(
 
 
 class MokshaMenuBase(twc.Widget):
-    template = "mako:moksha.apps.menus.templates.mbmenu"
+    template = "mako:mdemos.menus.templates.mbmenu"
     resources = [jquery_mbmenu_min_js, mbmenu_css_1]
     params = ['callback', 'rootMenuSelector', 'menuSelector', 'id', 'menus',
               'additionalData', 'iconPath', 'menuWidth', 'openOnRight',
@@ -65,7 +65,7 @@ class MokshaMenuBase(twc.Widget):
     rootMenuSelector = 'rootVoices'
     menuSelector = 'menuContainer'
     callback = '/apps/menu'
-    iconPath = '/resources/moksha.apps.menus.widgets/static/images/'
+    iconPath = '/resources/mdemos.menus.widgets/static/images/'
     additionalData = ""
     menus = []
     menuWidth = 200

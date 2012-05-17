@@ -17,9 +17,8 @@ import moksha
 import moksha.utils
 
 from tg import expose, redirect
-from moksha.lib.base import Controller
 
-class MokshaMenuController(Controller):
+class MokshaMenuController(object):
     name = 'Moksha Menus'
 
     @expose()

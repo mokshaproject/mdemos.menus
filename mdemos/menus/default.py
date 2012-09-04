@@ -22,8 +22,7 @@ the installed Applications, Widgets, etc.
 .. moduleauthor:: Luke Macken <lmacken@redhat.com>
 """
 
-import moksha
-import moksha.utils
+import moksha.common.utils
 
 from mdemos.menus import (
     MokshaMenu, MokshaContextualMenu,
@@ -54,7 +53,7 @@ class MokshaDefaultMenu(MokshaMenu):
             <br/>
         </a>
         """
-        for id, widget in moksha.utils._widgets.iteritems():
+        for id, widget in moksha.common.utils._widgets.iteritems():
             if not getattr(widget['widget'], 'hidden', False):
                 menu += """
                       <a href="#" onclick="

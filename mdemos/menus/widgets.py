@@ -30,7 +30,7 @@ Bicocchi. © 2002-2008 Open Lab srl, Matteo Bicocchi. GPL licensed.
 import tw2.core as twc
 import tw2.jquery
 
-from moksha.lib.helpers import when_ready
+from moksha.wsgi.lib.helpers import when_ready
 
 modname = __name__
 

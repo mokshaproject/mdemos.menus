@@ -7,14 +7,14 @@ except ImportError:
 
 setup(
     name="mdemos.menus",
-    version="1.0.0",
+    version="1.0.1",
     url="http://moksha.fedorahosted.org",
     description="Moksha Menus App",
     license="ASL 2.0",
     long_description="",
     author="Luke Macken",
     author_email="lmacken@redhat.com",
-    packages=['mdemos', 'mdemos.menus',],
+    packages=['mdemos', 'mdemos.menus', 'mdemos.menus.controllers'],
     namespace_packages=['mdemos'],
     include_package_data=True,
     zip_safe=False,

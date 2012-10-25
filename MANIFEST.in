@@ -1,1 +1,3 @@
-recursive-include moksha *.mak *.html *.js *.png *.gif *.css *.jpg *.jpeg
+recursive-include mdemos/menus/static *
+recursive-include mdemos/menus/templates *
+recursive-include mdemos/menus/public *

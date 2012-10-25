@@ -13,13 +13,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import moksha
-import moksha.utils
+import moksha.common.utils
 
 from tg import expose, redirect
-from moksha.lib.base import Controller
 
-class MokshaMenuController(Controller):
+class MokshaMenuController(object):
     name = 'Moksha Menus'
 
     @expose()
@@ -36,12 +34,12 @@ class MokshaMenuController(Controller):
         menu_id = '_'.join(split[:-1])
         menu_item = split[-1]
         try:
-            menu = getattr(moksha.utils.menus[menu_id], menu_item)(**kw)
+            menu = getattr(moksha.common.utils.menus[menu_id], menu_item)(**kw)
         except KeyError, e:
             # For the widget demo, just use the default menu
             if menu_id == 'test_widget':
                 menu_id = 'default_menu'
-                menu = getattr(moksha.utils.menus[menu_id], menu_item)(**kw)
+                menu = getattr(moksha.common.utils.menus[menu_id], menu_item)(**kw)
             else:
                 redirect('/404')
         return """

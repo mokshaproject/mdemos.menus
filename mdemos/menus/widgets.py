@@ -30,7 +30,7 @@ Bicocchi. © 2002-2008 Open Lab srl, Matteo Bicocchi. GPL licensed.
 import tw2.core as twc
 import tw2.jquery
 
-from moksha.lib.helpers import when_ready
+from moksha.wsgi.lib.helpers import when_ready
 
 modname = __name__
 
@@ -52,10 +52,15 @@ mbmenu_css = twc.CSSLink(
     filename='static/css/menu.css',
     media='screen')
 
+mbmenu_dir = twc.DirLink(
+    modname=modname,
+    filename='static/',
+)
+
 
 class MokshaMenuBase(twc.Widget):
     template = "mako:mdemos.menus.templates.mbmenu"
-    resources = [jquery_mbmenu_min_js, mbmenu_css_1]
+    resources = [jquery_mbmenu_min_js, mbmenu_css_1, mbmenu_dir]
     params = ['callback', 'rootMenuSelector', 'menuSelector', 'id', 'menus',
               'additionalData', 'iconPath', 'menuWidth', 'openOnRight',
               'hasImages', 'fadeTime', 'adjustLeft', 'adjustTop', 'opacity',
@@ -65,7 +70,7 @@ class MokshaMenuBase(twc.Widget):
     rootMenuSelector = 'rootVoices'
     menuSelector = 'menuContainer'
     callback = '/apps/menu'
-    iconPath = '/resources/mdemos.menus.widgets/static/images/'
+    iconPath = '/tw2/resources/mdemos.menus.widgets/static/images/'
     additionalData = ""
     menus = []
     menuWidth = 200

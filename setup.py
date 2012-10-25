@@ -7,7 +7,7 @@ except ImportError:
 
 setup(
     name="mdemos.menus",
-    version="1.0.1",
+    version="1.0.2",
     url="http://moksha.fedorahosted.org",
     description="Moksha Menus App",
     license="ASL 2.0",

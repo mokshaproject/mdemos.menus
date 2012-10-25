@@ -52,10 +52,15 @@ mbmenu_css = twc.CSSLink(
     filename='static/css/menu.css',
     media='screen')
 
+mbmenu_dir = twc.DirLink(
+    modname=modname,
+    filename='static/',
+)
+
 
 class MokshaMenuBase(twc.Widget):
     template = "mako:mdemos.menus.templates.mbmenu"
-    resources = [jquery_mbmenu_min_js, mbmenu_css_1]
+    resources = [jquery_mbmenu_min_js, mbmenu_css_1, mbmenu_dir]
     params = ['callback', 'rootMenuSelector', 'menuSelector', 'id', 'menus',
               'additionalData', 'iconPath', 'menuWidth', 'openOnRight',
               'hasImages', 'fadeTime', 'adjustLeft', 'adjustTop', 'opacity',

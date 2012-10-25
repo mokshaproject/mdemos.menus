@@ -70,7 +70,7 @@ class MokshaMenuBase(twc.Widget):
     rootMenuSelector = 'rootVoices'
     menuSelector = 'menuContainer'
     callback = '/apps/menu'
-    iconPath = '/resources/mdemos.menus.widgets/static/images/'
+    iconPath = '/tw2/resources/mdemos.menus.widgets/static/images/'
     additionalData = ""
     menus = []
     menuWidth = 200

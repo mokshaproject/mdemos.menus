@@ -22,11 +22,15 @@ the installed Applications, Widgets, etc.
 .. moduleauthor:: Luke Macken <lmacken@redhat.com>
 """
 
+import tw2.core
 import moksha.common.utils
 
 from mdemos.menus import (
     MokshaMenu, MokshaContextualMenu,
 )
+
+menu_images = tw2.core.DirLink(filename="public", modname=__name__)
+
 
 class MokshaContextMenu(MokshaContextualMenu):
 
@@ -34,7 +38,7 @@ class MokshaContextMenu(MokshaContextualMenu):
     def default(cls, *args, **kw):
         return """
             <a rel="text">
-                <img src="/images/moksha-icon.png" style="position:absolute;margin-top:-20px; margin-left:-25px;margin-bottom:10px"/><br/>
+                <img src="/tw2/resources/mdemos.menus.default/public/moksha-icon.png" style="position:absolute;margin-top:-20px; margin-left:-25px;margin-bottom:10px"/><br/>
             </a>
             <a href="/widget">Documentation</a>
             <a href="https://fedorahosted.org/moksha/report/3">Tickets</a>
@@ -49,7 +53,7 @@ class MokshaDefaultMenu(MokshaMenu):
     def widgets(cls, *args, **kw):
         menu = """
         <a rel="text">
-            <img src="/images/block.png" style="position:absolute;margin-top:-20px; margin-left:-25px;margin-bottom:10px"/>
+            <img src="/tw2/resources/mdemos.menus.default/public/block.png" style="position:absolute;margin-top:-20px; margin-left:-25px;margin-bottom:10px"/>
             <br/>
         </a>
         """
@@ -74,7 +78,7 @@ class MokshaDefaultMenu(MokshaMenu):
     def moksha(cls, *args, **kw):
         return """
         <a rel="text">
-            <img src="/images/moksha-icon.png" style="position:absolute;margin-top:-20px; margin-left:-25px;margin-bottom:10px"/><br>
+            <img src="/tw2/resources/mdemos.menus.default/public/moksha-icon.png" style="position:absolute;margin-top:-20px; margin-left:-25px;margin-bottom:10px"/><br>
             <br>Moksha is a platform for creating live collaborative web applications.<br><br>
         </a>
         <a rel="separator"></a>
@@ -101,7 +105,7 @@ class MokshaDefaultMenu(MokshaMenu):
         }
         menu = """
             <a rel="text">
-                <img src="/images/fedora-icon.png" style="position:absolute;margin-top:-20px; margin-left:-25px;margin-bottom:10px"/><br>
+                <img src="/tw2/resources/mdemos.menus.default/public/fedora-icon.png" style="position:absolute;margin-top:-20px; margin-left:-25px;margin-bottom:10px"/><br>
             </a>
             <a rel="separator"></a>
         """
